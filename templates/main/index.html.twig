@@ -1,32 +1,38 @@
 {% extends 'base.html.twig' %}
+
 {% block title %}Question/Answer App{% endblock %}
+
 {% block body %}
     <div class="row">
         <div class="col-10 offset-1">
-            <div class="card mb-3">
-                <div class="card-body bg-light">
-                    <div class="row">
-                        <div class="col">
-                            <div class="row">
-                                <div class="col-6 text-center">
-                                    0
-                                    <br>
-                                    <small>answers</small>
-                                </div>
-                                <div class="col-6 text-center">
-                                    0
-                                    <br>
-                                    <small>views</small>
+            {% for question in questions %}
+                <div class="card mb-3">
+                    <div class="card-body bg-light">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-6 text-center">
+                                        {{ question.answers|length }}
+                                        <br>
+                                        <small>answers</small>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        {{ question.views }}
+                                        <br>
+                                        <small>views</small>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-10">
-                            <h5 class="card-title"><a href="#">[Question Title Placeholder]</a></h5>
-                            <p class="card-text text-muted small">asked by [User Placeholder] [Post Time Placeholder]</p>
+                            <div class="col-10">
+                                <h5 class="card-title"><a href="{{ path('app_question', { 'id': question.id }) }}">{{ question.question }}</a></h5>
+                                <p class="card-text text-muted small">asked by {{ question.user.email }}  {{ question.created|date("m/d/Y h:i a") }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            {% else %}
+                <div class="text-center alert alert-primary">No questions posted!</div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
