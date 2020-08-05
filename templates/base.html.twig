@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html xml:lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}ASK ME clone!{% endblock %}</title>
@@ -17,6 +18,9 @@
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
                 {% if app.user %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('chat') }}">Chat page </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('app_question_ask') }}">Ask a Question</a>
                     </li>
