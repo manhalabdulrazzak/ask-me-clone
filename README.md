@@ -38,6 +38,28 @@ for More Frontend – Javascript chat real time for test
 run this commend
 
 `php bin/console run:websocket-server
-`
-and We are done! ❤️
+`\
+\
+\
+
+
+ update : for make social login system  we need install
+ \
+ \
+ \
+ 
+[oauth2-client-bundle](https://github.com/knpuniversity/oauth2-client-bundle)
+
+
+`composer require knpuniversity/oauth2-client-bundle
+`\
+\
+
+**You'll need to configure one client for each OAuth2 server
+ (GitHub, Facebook, etc) that you want to talk to.**
+
+
+
+
+# and We are done! ❤️
 
