@@ -10,6 +10,8 @@ security:
             entity:
                 class: App\Entity\User
                 property: email
+        oauth:
+            id: knpu.oauth2.user_provider
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -21,6 +23,8 @@ security:
             guard:
                 authenticators:
                     - App\Security\LoginformAuthenticator
+                    - App\Security\MyFacebookAuthenticator
+                entry_point: App\Security\MyFacebookAuthenticator
             logout:
                 path: app_logout
                 # where to redirect after logout

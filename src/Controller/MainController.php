@@ -10,7 +10,7 @@ use App\Repository\QuestionRepository;
 class MainController extends AbstractController
 {
     /**
-     * @Route("/main", name="main")
+     * @Route("/", name="main")
      * @param QuestionRepository $questionRepository
      * @return Response
      */

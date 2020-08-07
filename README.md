@@ -24,9 +24,10 @@ what we need to start
 
 Add in composer.json
 
-`"repositories": [{
-	"type": "vcs",
-	"url": "https://github.com/simPod/Ratchet.git"
+`"repositories":
+[{
+	"type": "vcs
+"	"url": "https://github.com/simPod/Ratchet.git"
 }],`
 
 🔴 Important ! you need add this commends for websocket to allow in dev in Symfony 5

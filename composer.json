@@ -14,6 +14,9 @@
         "doctrine/doctrine-bundle": "^2.1",
         "doctrine/doctrine-migrations-bundle": "^3.0",
         "doctrine/orm": "^2.7",
+        "knpuniversity/oauth2-client-bundle": "^2.2",
+        "league/oauth2-facebook": "^2.0",
+        "league/oauth2-github": "^2.0",
         "sensio/framework-extra-bundle": "^5.5",
         "symfony/asset": "5.1.*",
         "symfony/console": "5.1.*",
@@ -31,7 +34,8 @@
         "symfony/web-profiler-bundle": "5.1.*",
         "symfony/yaml": "5.1.*",
         "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "twig/twig": "^2.12|^3.0",
+      "ext-http": "*"
     },
     "require-dev": {
         "symfony/debug-bundle": "^5.1",
